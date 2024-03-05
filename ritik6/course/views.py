@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 def learn_django(request):
-    return HttpResponse('300')
+    return HttpResponse('hello django')
 
 def learn_python(request):
-    return HttpResponse( '200')
+    return HttpResponse( 'hello python')
