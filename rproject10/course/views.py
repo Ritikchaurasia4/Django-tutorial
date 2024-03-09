@@ -6,6 +6,8 @@ from django.http import HttpResponse
 # here we also use render and HttpResponse with eachother
 
 def learn_django(request):
-    return render('<h1> hello django </h1>')
+    return render(request , 'course1.htm')
 def learn_python(request):
-    return HttpResponse('<h1> hello python </h1>')
+    return render(request , 'course2.html')
+def something(request):
+    return HttpResponse('jai shree Ram')
