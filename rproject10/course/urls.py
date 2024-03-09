@@ -3,5 +3,5 @@ from . import views
 urlpatterns = [
    path('learndj/', views.learn_django),
    path('learnpy/', views.learn_python),
-   path('some/',views.something),
+   
 ]
