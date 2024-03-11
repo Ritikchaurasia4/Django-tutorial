@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: black;
+            color: seashell;
+        }
+    </style>
     <title>Django</title>
 </head>
 <body>
-    <h2>Name:{{nm}} Duration:{{du}} Seats:{{st}} </h2>
+
+    <!-- These all are filters , are use in django -->
+
+    <!-- <h2>Name:{{nm}} Duration:{{du}} Seats:{{st}} </h2> -->
+
+    <!-- <h2>{{nm|capfirst}}</h2> -->
+
+    <!-- <h2>{{nm|default:'Nothing'}}</h2> 
+    -->
+    
+    <!-- <h2>{{nm|length}}</h2> -->
+
+    <!-- <h2>{{nm|lower}}</h2> -->
+
+    <!-- <h2>{{nm|upper}}</h2> -->
+
+    <!-- <h2>{{nm|slice:2}}</h2> -->
+
+    <!-- <h2>{{nm|truncatechars:3}}</h2> -->
+
+    <h2>{{nm|truncatewords:2}}</h2>
+
 </body>
 </html>
