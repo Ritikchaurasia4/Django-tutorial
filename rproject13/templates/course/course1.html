@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <!-- These all are filters , are use in django -->
+<!-- These all are filters , are use in django -->
 
     <!-- <h2>Name:{{nm}} Duration:{{du}} Seats:{{st}} </h2> -->
 
@@ -40,7 +40,7 @@
     <h3>{{dt|date:'SHORT_DATE_FORMAT'}}</h3>
     <h3>{{dt|date:'SHORT_DATE'}}</h3> -->
 
-    <h2>{{p1}}</h2>
+    <!-- <h2>{{p1}}</h2>
     <h2>{{p2}}</h2>
     <h2>{{p3}}</h2>
 
@@ -58,7 +58,33 @@
 
     <h2>{{p1|floatformat:-3}}</h2>
     <h2>{{p2|floatformat:-3}}</h2>
-    <h2>{{p3|floatformat:-3}}</h2>
+    <h2>{{p3|floatformat:-3}}</h2> -->
+
+
+{% comment %} THESE ARE THE  if tag in django , syntax {% if %} {% endcomment %}
+
+   <!-- 
+    {% if nm %}
+    <h3>Hello {{nm}}</h3>
+    {% endif %} -->
+
+    {% comment %} {% if nm and st %}
+    <h3>{{st}} Seat are available for {{nm}} course</h3>
+    {% endif %}
+
+    {% if nm or st %}
+    <h3>{{st}} Seat are available for {{nm}} course</h3>
+    {% endif %}
+
+    {% if  not st %}
+    <h3>Seats not available</h3>
+    {% endif %}
+
+    {% if 'nm|length>=4' %}
+    <h3>Hello {{nm}}</h3>
+    {% endif %} {% endcomment %}
+
+    
 
 </body>
 </html>
