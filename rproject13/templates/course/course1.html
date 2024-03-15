@@ -84,7 +84,41 @@
     <h3>Hello {{nm}}</h3>
     {% endif %} {% endcomment %}
 
-    
+{% comment %} for lop tag in django are use  {% endcomment %}
 
+{% comment %} there are more predefined keywords in for tag {% endcomment %}
+
+    {% comment %} forloop.counter , forloop.first , forloop.last,forloop.counter0 , forloop.revcounter , forloop.revcounter0 {% endcomment %}
+
+    {% comment %} {% for name in names reversed %}
+    {{forloop.counter}} 
+    {{forloop.first}}
+    {{name}} 
+    {% endfor %} {% endcomment %}
+    <h3>
+    {% comment %} {{student}}
+    <br>
+    {{student.stu1}}
+    {{student.stu1.name}}
+    {{student.stu1.rollno}} {% endcomment %}
+
+{% comment %} this is for find both value and it's key {% endcomment %}
+
+    {% comment %} {% for key , value in student.stu1.items %}
+    {{key}} = {{value}}<br>
+    <br>
+    
+    {% endfor %} {% endcomment %}
+
+    {% for key , value in stu.items %}
+    {% comment %} {{key}} = {{value}}
+    {% endcomment %} 
+    {{ key }}<br>
+    {% for k , v in value.items %}
+    {{k}} = {{v}}<br>
+    {% endfor %}
+    {% endfor %}
+
+    </h3>
 </body>
 </html>
