@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h2>Start learning {{cname}}</h2>
+    <img src="{% static 'images/img1.jpg' %}" alt="django">
+    <img src="{% get_static_prefix %} images/img1.jpg" alt="Django">
+</body>
+</html>
