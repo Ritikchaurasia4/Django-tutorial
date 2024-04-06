@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+{% extends 'core/base.html' %}
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +7,7 @@
     <title>about</title>
 </head>
 <body>
-    <h2>about page</h2>
+    
     <nav>
         <ul>
         
@@ -17,4 +18,12 @@
     </nav>
     <h2>about page</h2>
 </body>
-</html>
+</html> {% endcomment %}
+
+
+
+{% comment %} override title block {% endcomment %}
+
+{% comment %} {% block title %} about {% endblock title %} {% endcomment %}
+
+{% block content %} <h2> I am new about page </h2> {% endblock content %}

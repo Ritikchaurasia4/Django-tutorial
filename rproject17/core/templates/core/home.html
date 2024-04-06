@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+{% extends 'core/base.html' %}
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,4 +17,14 @@
 </nav>
 <h2>Home page</h2>
 </body>
-</html>
+</html> {% endcomment %}
+
+{% comment %} Inherit base.html  {% endcomment %}
+
+
+
+{% comment %} override title block {% endcomment %}
+
+{% block title %} {{block.super}} Home {% endblock title %}
+
+{% block content %} <h2> I am new home page </h2> {% endblock content %}
