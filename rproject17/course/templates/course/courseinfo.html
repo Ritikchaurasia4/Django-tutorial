@@ -22,4 +22,9 @@
 
 {% block title %} Django {% endblock title %}
 
+{% load static %}
+{% block corecss %}
+<link rel="stylesheet" href="{% static 'course/css/course.css' %}">
+{% endblock corecss %}
+
 {% block content %} <h2> I am new Django course </h2> {% endblock content %}

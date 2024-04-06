@@ -1,11 +1,16 @@
 {% comment %} copy the common code {% endcomment %}
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} other{% endblock title %}</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'core/css/core.css' %}"> {% endcomment %}
+
+    {% block corecss %}
+    <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+    {% endblock corecss %}
 </head>
 <body>
     <nav>
@@ -16,5 +21,7 @@
     </ul>
     </nav>
     {% block content %}{% endblock content %}
+    {% block content1 %}{% endblock content1 %}
+    {% block content2 %}{% endblock content2 %}
 </body>
 </html>
