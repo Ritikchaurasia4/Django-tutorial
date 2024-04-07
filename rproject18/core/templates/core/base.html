@@ -1,0 +1,55 @@
+{% comment %} copy the common code {% endcomment %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} other{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'core/css/all.min.css'%}">
+    {% comment %} <link rel="stylesheet" href="{% static 'core/css/core.css' %}"> {% endcomment %}
+
+    <link rel="stylesheet" href="{% static 'cor/css/bootstrap.css %'}">
+
+    {% block corecss %}
+    <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+    {% endblock corecss %}
+</head>
+<body>
+    <nav>
+        <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+
+        <li><a href="{% url 'aboutus' %}">About</a></li>
+
+        {% comment %} <li><a href="{{abc}}">About</a></li> {% endcomment %}
+
+        <li><a href="/cor/django">Django course</a></li>
+
+        <li><a href="{% url 'courseone' %}">Django course</a></li>
+    </ul>
+    </nav>
+
+    <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+{% comment %} <button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button> {% endcomment %}
+
+<i class="fa-solid fa-waffle"></i>
+    {% block content %}{% endblock content %}
+    {% block content1 %}{% endblock content1 %}
+    {% block content2 %}{% endblock content2 %}
+    <script script=" {% static 'core/js/jquery.js' %}"></script>
+    <script script=" {% static 'core/js/propper.js' %}"></script>
+    <script script=" {% static 'core/js/bootstrap.js' %}"></script>
+    <script script=" {% static 'core/js/all.min.js' %}"></script>
+    
+</body>
+</html>

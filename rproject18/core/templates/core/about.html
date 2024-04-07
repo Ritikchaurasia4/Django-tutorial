@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+        
+        <li>Home</li>
+        <li>About</li>
+        <li>Django course</li>
+    </ul>
+    </nav>
+    <h2>about page</h2>
+</body>
+</html> {% endcomment %}
+
+
+
+{% comment %} override title block {% endcomment %}
+
+{% comment %} {% block title %} about {% endblock title %} {% endcomment %}
+
+{% block content %} 
+<h2> I am new about page </h2> 
+{% comment %} <a href="{{abc}}">Something about</a> {% endcomment %}
+{% endblock content %}
